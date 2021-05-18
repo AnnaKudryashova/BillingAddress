@@ -1,12 +1,12 @@
 @isTest
-private class BillingAddressTriggerTest { 
+private class BillingAddressTriggerTest {
 	@testSetup
-    static void initData() {
-        List<Account> accounts = TestDataFactory.createAccounts(200, 'Test Account');
-        Test.startTest();
-        insert accounts;
-        Test.stopTest();
-    }
+	static void initData() {		
+		List<Account> accounts = TestDataFactory.createAccounts(200, 'Test Account');
+		Test.startTest();
+		insert accounts;
+		Test.stopTest();
+	}
     
 	@isTest
 	static void testUpdateAccountAddress() {
