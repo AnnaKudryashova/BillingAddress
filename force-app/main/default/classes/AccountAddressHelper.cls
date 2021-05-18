@@ -21,9 +21,9 @@ public with sharing class AccountAddressHelper {
     @future
     public static void updateAccountAddresses(List<Id> ids) {
         	List<BillingAddress__c> addresses = [SELECT Id, BillingStreet__c, 
-                                                        BillingPostalCode__c, BillingState__c, 
-                                                        BillingCountry__c, BillingCity__c, AccountId__c                                                                                                 
-                                              			FROM BillingAddress__c WHERE Id IN :ids];
+                                                 BillingPostalCode__c, BillingState__c, 
+                                                 BillingCountry__c, BillingCity__c, AccountId__c                                                                                                 
+                                                 FROM BillingAddress__c WHERE Id IN :ids];
         	List<Account> accountsList = [SELECT Id, BillingCity, BillingCountry, BillingPostalCode, BillingState, BillingStreet FROM Account];
             Map<Id, Account> accountsMap = new Map<Id, Account>();
         	for (Account account : accountsList) {
