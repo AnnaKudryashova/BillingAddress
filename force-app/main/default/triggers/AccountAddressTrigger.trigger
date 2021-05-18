@@ -1,6 +1,6 @@
 trigger AccountAddressTrigger on Account (after insert, after update) {
     
-		if (Trigger.isAfter && Trigger.isInsert) {
+	if (Trigger.isAfter && Trigger.isInsert) {
         	BillingAddressHandler.handleAfterInsert(Trigger.newMap);
     	}
             
